@@ -7,13 +7,14 @@ let computerChoice = 'stone'; //
 
 /* Actions */
 function loadPage() {
-    displayResult();
+    displayResults();
 }
 
 function playAgain() {
     gameState;
     loadPage();
 }
+
 /* Components */
 const stoneImg = document.getElementById('stone-img');
 const clothImg = document.getElementById('cloth-img');
@@ -23,21 +24,44 @@ const stone = document.getElementById('choose-stone');
 const cloth = document.getElementById('choose-cloth');
 const scythe = document.getElementById('choose-scythe');
 
-const display1 = document.getElementById('display-1');
+const draw = document.getElementById('display-1');
+const rockBeatsScythe = document.getElementById('display-2');
+const scytheBeatsCloth = document.getElementById('display-3');
+const clothBeatsRock = document.getElementById('display-4');
+const rockBeatsScytheLoss = document.getElementById('display-5');
+const scytheBeatsClothLoss = document.getElementById('display-6');
+const clothBeatsRockLoss = document.getElementById('display-7');
 
 const playAgainButton = document.getElementById('play-again');
 
 /* Component */
 // get DOM
 // display
-function displayResult() {
+function displayResults() {
     stoneImg.classList.remove('hide');
     clothImg.classList.remove('hide');
     scytheImg.classList.remove('hide');
-}
-
-if (choice === computerChoice) {
-    display1;
+    if (choice === computerChoice) {
+        draw;
+    }
+    if (choice === 'rock' && computerChoice === 'scythe') {
+        rockBeatsScythe;
+    }
+    if (choice === 'scythe' && computerChoice === 'cloth') {
+        scytheBeatsCloth;
+    }
+    if (choice === 'cloth' && computerChoice === 'rock') {
+        clothBeatsRock;
+    }
+    if (choice === 'scythe' && computerChoice === 'rock') {
+        rockBeatsScytheLoss;
+    }
+    if (choice === 'rock' && computerChoice === 'cloth') {
+        clothBeatsRockLoss;
+    }
+    if (choice === 'cloth' && computerChoice === 'scythe') {
+        scytheBeatsClothLoss;
+    }
 }
 
 // event listeners
