@@ -1,6 +1,6 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
+    --background: rgb(237, 241, 223);
+    --header-background: ivory;
     --footer-background: rgb(243, 242, 242);
 }
 
@@ -13,13 +13,35 @@ body {
 }
 
 header {
-    position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     background-color: var(--header-background);
+    justify-content: center;
+    height: 50px;
 }
 
 main {
     padding: 20px;
+}
+
+.image {
+    height: 200px;
+    justify-content: center;
+}
+
+#scoreboard {
+    text-align: center;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.3em;
+    padding-bottom: 75px;
+}
+
+#chicken {
+    height: 50%;
 }

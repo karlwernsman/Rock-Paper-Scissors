@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Rock, Paper, Scissors</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <title>Stone, Cloth, Scythe</title>
+        <link rel="icon" type="image/x-icon" href="./assets/alchemy-favicon.png" />
 
         <!-- js -->
         <script type="module" src="app.js"></script>
@@ -28,10 +28,51 @@
 
     <body>
         <header>
-            <img src="/assets/html_css_js.png" />
-            <h1>Rock, Paper, Scissors</h1>
+            <img id="chicken" src="./assets/stardew-chicken.png" />
+            <h1>Stone, Cloth, Scythe</h1>
+            <img id="chicken" src="./assets/stardew-chicken.png" />
         </header>
 
-        <main></main>
+        <section>
+            <div id="scoreboard">
+                <h2>Scores!</h2>
+                <ul id="scores">
+                    <li id="wins">wins</li>
+                    <li id="losses">losses</li>
+                    <li id="total">total</li>
+                </ul>
+            </div>
+
+            <section id="choices">
+                <div>
+                    <img
+                        id="stone-img"
+                        class="image hide"
+                        src="./assets/stone-stardew.webp"
+                        alt="stone image"
+                    />
+                    <img
+                        id="cloth-img"
+                        class="image hide"
+                        src="./assets/cloth-stardew.webp"
+                        alt="cloth image"
+                    />
+                    <img
+                        id="scythe-img"
+                        class="image hide"
+                        src="./assets/scythe-stardew.webp"
+                        alt="scythe image"
+                    />
+                </div>
+
+                <div>
+                    <button id="choose-stone" class="choice-buttons">stone</button>
+                    <button id="choose- cloth" class="choice-buttons">cloth</button>
+                    <button id="choose-scythe" class="choice-buttons">scythe</button>
+                </div>
+            </section>
+
+            <button id="play-again">Play again?</button>
+        </main>
     </body>
 </html>
