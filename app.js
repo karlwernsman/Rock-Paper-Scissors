@@ -15,7 +15,7 @@ function loadPage() {
 }
 
 function playAgain() {
-    gameState;
+    gameState = 'choice';
     loadPage();
 }
 
@@ -36,44 +36,44 @@ function getRandomItem(array) {
 }
 
 function winConditions() {
-    console.log(choice);
-    console.log(computerChoice);
-    if (choice === computerChoice) {
-        draw.classList.remove('hide');
-        total++;
-    }
-    if (choice === 'stone' && computerChoice === 'scythe') {
-        stoneBeatsScythe.classList.remove('hide');
-        clothImg.classList.add('hide');
-        total++;
-        wins++;
-    }
-    if (choice === 'scythe' && computerChoice === 'cloth') {
-        scytheBeatsCloth.classList.remove('hide');
-        stoneImg.classList.remove('add');
-        total++;
-        wins++;
-    }
-    if (choice === 'cloth' && computerChoice === 'stone') {
-        clothBeatsStone.classList.remove('hide');
-        scytheImg.classList.add('hide');
-        total++;
-        wins++;
-    }
-    if (choice === 'scythe' && computerChoice === 'stone') {
-        stoneBeatsScytheLoss.classList.remove('hide');
-        clothImg.classList.add('hide');
-        total++;
-    }
-    if (choice === 'stone' && computerChoice === 'cloth') {
-        clothBeatsStoneLoss.classList.remove('hide');
-        scytheImg.classList.add('hide');
-        total++;
-    }
-    if (choice === 'cloth' && computerChoice === 'scythe') {
-        scytheBeatsClothLoss.classList.remove('hide');
-        stoneImg.classList.add('hide');
-        total++;
+    if (gameState === 'results') {
+        if (choice === computerChoice) {
+            draw.classList.remove('hide');
+            total++;
+        }
+        if (choice === 'stone' && computerChoice === 'scythe') {
+            stoneBeatsScythe.classList.remove('hide');
+            clothImg.classList.add('hide');
+            total++;
+            wins++;
+        }
+        if (choice === 'scythe' && computerChoice === 'cloth') {
+            scytheBeatsCloth.classList.remove('hide');
+            stoneImg.classList.remove('add');
+            total++;
+            wins++;
+        }
+        if (choice === 'cloth' && computerChoice === 'stone') {
+            clothBeatsStone.classList.remove('hide');
+            scytheImg.classList.add('hide');
+            total++;
+            wins++;
+        }
+        if (choice === 'scythe' && computerChoice === 'stone') {
+            stoneBeatsScytheLoss.classList.remove('hide');
+            clothImg.classList.add('hide');
+            total++;
+        }
+        if (choice === 'stone' && computerChoice === 'cloth') {
+            clothBeatsStoneLoss.classList.remove('hide');
+            scytheImg.classList.add('hide');
+            total++;
+        }
+        if (choice === 'cloth' && computerChoice === 'scythe') {
+            scytheBeatsClothLoss.classList.remove('hide');
+            stoneImg.classList.add('hide');
+            total++;
+        }
     }
 }
 /* Components */
