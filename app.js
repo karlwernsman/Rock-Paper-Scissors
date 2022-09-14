@@ -12,6 +12,8 @@ let total = 0;
 /* Actions */
 function loadPage() {
     scoreboardMath();
+    displayResults();
+    winConditions();
 }
 
 function playAgain() {
@@ -37,8 +39,22 @@ function getRandomItem(array) {
 
 function winConditions() {
     if (gameState === 'results') {
-        if (choice === computerChoice) {
+        if (choice === 'stone' && computerChoice === 'stone') {
             draw.classList.remove('hide');
+            clothImg.classList.add('hide');
+            scytheImg.classList.add('hide');
+            total++;
+        }
+        if (choice === 'cloth' && computerChoice === 'cloth') {
+            draw.classList.remove('hide');
+            stoneImg.classList.add('hide');
+            scytheImg.classList.add('hide');
+            total++;
+        }
+        if (choice === 'scythe' && computerChoice === 'scythe') {
+            draw.classList.remove('hide');
+            stoneImg.classList.add('hide');
+            clothImg.classList.add('hide');
             total++;
         }
         if (choice === 'stone' && computerChoice === 'scythe') {
@@ -49,7 +65,7 @@ function winConditions() {
         }
         if (choice === 'scythe' && computerChoice === 'cloth') {
             scytheBeatsCloth.classList.remove('hide');
-            stoneImg.classList.remove('add');
+            stoneImg.classList.add('hide');
             total++;
             wins++;
         }
@@ -103,12 +119,6 @@ const playAgainButton = document.getElementById('play-again');
 /* Component */
 // get DOM
 // display
-// function displayChoice() {
-//     stoneImg.classList.remove('hide');
-//     clothImg.classList.remove('hide');
-//     scytheImg.classList.remove('hide');
-// }
-
 function displayResults() {
     winConditions();
 }
