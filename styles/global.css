@@ -45,3 +45,12 @@ main {
 #chicken {
     height: 50%;
 }
+
+.hide {
+    display: none;
+}
+
+.choice-container {
+    display: flex;
+    justify-content: space-around;
+}

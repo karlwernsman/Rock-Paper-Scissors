@@ -44,28 +44,28 @@
             </div>
 
             <section id="choices">
-                <div>
+                <div class="choice-container">
                     <img
                         id="stone-img"
-                        class="image hide"
+                        class="image"
                         src="./assets/stone-stardew.webp"
                         alt="stone image"
                     />
                     <img
                         id="cloth-img"
-                        class="image hide"
+                        class="image"
                         src="./assets/cloth-stardew.webp"
                         alt="cloth image"
                     />
                     <img
                         id="scythe-img"
-                        class="image hide"
+                        class="image"
                         src="./assets/scythe-stardew.webp"
                         alt="scythe image"
                     />
                 </div>
 
-                <div>
+                <div class="choice-container">
                     <button id="choose-stone" class="choice-buttons">stone</button>
                     <button id="choose-cloth" class="choice-buttons">cloth</button>
                     <button id="choose-scythe" class="choice-buttons">scythe</button>
@@ -74,13 +74,13 @@
             
             <section id="results">
                 <div id="displays">
-                    <p id="display-1">It's a draw!</p>
-                    <p id="display-2">Rock beats scythe. You win!</p>
-                    <p id="display-3">Scythe beats cloth. You win!</p>
-                    <p id="display-4">Cloth beats rock. You win!</p>
-                    <p id="display-5">Rock beats scythe. You lose...</p>
-                    <p id="display-6">Scythe beats cloth. You lose...</p>
-                    <p id="display-7">Cloth beats rock. You lose...</p>
+                    <p id="display-1" class="hide">It's a draw!</p>
+                    <p id="display-2" class="hide">Stone beats scythe. You win!</p>
+                    <p id="display-3" class="hide">Scythe beats cloth. You win!</p>
+                    <p id="display-4" class="hide">Cloth beats stone. You win!</p>
+                    <p id="display-5" class="hide">Stone beats scythe. You lose...</p>
+                    <p id="display-6" class="hide">Scythe beats cloth. You lose...</p>
+                    <p id="display-7" class="hide">Cloth beats stone. You lose...</p>
                 </div>
             </section>
             <button id="play-again">Play again?</button>
