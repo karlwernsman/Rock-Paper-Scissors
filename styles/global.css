@@ -4,6 +4,10 @@
     --footer-background: rgb(243, 242, 242);
 }
 
+* {
+    font-family: 'Playfair Display SC', serif;
+}
+
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
@@ -32,6 +36,9 @@ main {
 
 #scoreboard {
     text-align: center;
+    background: rgb(185, 192, 160);
+    border: 5px groove rgb(234, 241, 206);
+    margin: 40px 500px 80px 500px;
 }
 
 #scores {

@@ -16,8 +16,19 @@ function loadPage() {
     winConditions();
 }
 
+function displayChoice() {
+    scytheImg.classList.remove('hide');
+    clothImg.classList.remove('hide');
+    stoneImg.classList.remove('hide');
+    displays.classList.add('hide');
+    stone.classList.remove('hide');
+    cloth.classList.remove('hide');
+    scythe.classList.remove('hide');
+}
+
 function playAgain() {
     gameState = 'choice';
+    displayChoice();
     loadPage();
 }
 
@@ -105,7 +116,7 @@ const stone = document.getElementById('choose-stone');
 const cloth = document.getElementById('choose-cloth');
 const scythe = document.getElementById('choose-scythe');
 
-//const displays = document.getElementById('displays');
+const displays = document.getElementById('displays');
 const draw = document.getElementById('display-1');
 const stoneBeatsScythe = document.getElementById('display-2');
 const scytheBeatsCloth = document.getElementById('display-3');
@@ -132,16 +143,25 @@ stone.addEventListener('click', () => {
     choice = 'stone';
     gameState = 'results';
     displayResults();
+    stone.classList.add('hide');
+    cloth.classList.add('hide');
+    scythe.classList.add('hide');
 });
 cloth.addEventListener('click', () => {
     choice = 'cloth';
     gameState = 'results';
     displayResults();
+    stone.classList.add('hide');
+    cloth.classList.add('hide');
+    scythe.classList.add('hide');
 });
 scythe.addEventListener('click', () => {
     choice = 'scythe';
     gameState = 'results';
     displayResults();
+    stone.classList.add('hide');
+    cloth.classList.add('hide');
+    scythe.classList.add('hide');
 });
 /* Run page load code */
 loadPage();
