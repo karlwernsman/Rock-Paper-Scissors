@@ -1,7 +1,11 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
+    --background: rgb(237, 241, 223);
+    --header-background: ivory;
     --footer-background: rgb(243, 242, 242);
+}
+
+* {
+    font-family: 'Playfair Display SC', serif;
 }
 
 body {
@@ -13,13 +17,59 @@ body {
 }
 
 header {
-    position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     background-color: var(--header-background);
+    justify-content: center;
+    height: 50px;
 }
 
 main {
     padding: 20px;
+}
+
+.image {
+    height: 200px;
+    justify-content: center;
+}
+
+#scoreboard {
+    text-align: center;
+    background: rgb(185, 192, 160);
+    border: 5px groove rgb(234, 241, 206);
+    margin: 40px 500px 80px 500px;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.3em;
+    padding-bottom: 75px;
+}
+
+#chicken {
+    height: 50%;
+}
+
+.hide {
+    display: none;
+}
+
+.choice-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 35px;
+}
+
+#play-again-button {
+    display: flex;
+    justify-content: center;
+}
+
+#displays {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
 }
