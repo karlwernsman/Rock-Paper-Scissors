@@ -132,20 +132,33 @@ const playAgainButton = document.getElementById('play-again');
 // display
 function displayResults() {
     winConditions();
+    playAgainButton.classList.add('hide');
 }
 
 // event listeners
 playAgainButton.addEventListener('click', () => {
     playAgain();
+    displays.classList.add('hide');
+    draw.classList.add('hide');
+    stoneBeatsScythe.classList.add('hide');
+    scytheBeatsCloth.classList.add('hide');
+    clothBeatsStone.classList.add('hide');
+    stoneBeatsScytheLoss.classList.add('hide');
+    scytheBeatsClothLoss.classList.add('hide');
+    clothBeatsStoneLoss.classList.add('hide');
 });
 
 stone.addEventListener('click', () => {
     choice = 'stone';
     gameState = 'results';
     displayResults();
+
     stone.classList.add('hide');
     cloth.classList.add('hide');
     scythe.classList.add('hide');
+    displays.classList.remove('hide');
+    computerChoice = getRandomItem(computerArray);
+    playAgainButton.classList.remove('hide');
 });
 cloth.addEventListener('click', () => {
     choice = 'cloth';
@@ -154,6 +167,9 @@ cloth.addEventListener('click', () => {
     stone.classList.add('hide');
     cloth.classList.add('hide');
     scythe.classList.add('hide');
+    displays.classList.remove('hide');
+    computerChoice = getRandomItem(computerArray);
+    playAgainButton.classList.remove('hide');
 });
 scythe.addEventListener('click', () => {
     choice = 'scythe';
@@ -162,6 +178,9 @@ scythe.addEventListener('click', () => {
     stone.classList.add('hide');
     cloth.classList.add('hide');
     scythe.classList.add('hide');
+    displays.classList.remove('hide');
+    computerChoice = getRandomItem(computerArray);
+    playAgainButton.classList.remove('hide');
 });
 /* Run page load code */
 loadPage();
